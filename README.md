@@ -11,3 +11,5 @@
 `bundle exec rails g scaffold Product title:string description:text image_url:string price:decimal`
 
 `bundle exec rails generate controller Store index`
+
+`bundle exec rails dev:cache`
