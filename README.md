@@ -13,3 +13,5 @@
 `bundle exec rails generate controller Store index`
 
 `bundle exec rails dev:cache`
+
+`bundle exec rails generate scaffold Cart`
