@@ -15,3 +15,5 @@
 `bundle exec rails dev:cache`
 
 `bundle exec rails generate scaffold Cart`
+
+`bin/rails generate scaffold LineItem product:references cart:belongs_to`
