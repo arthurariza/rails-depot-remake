@@ -79,3 +79,5 @@ end
 gem 'tailwindcss-rails', '~> 2.0'
 
 gem 'rubocop', '~> 1.37', require: false
+
+gem 'rubocop-rails', '~> 2.17'
