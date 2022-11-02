@@ -10,6 +10,10 @@
     Your Pragmatic Catalog
   </h1>
 
+  <h2 class="text-lg my-4">
+    You made <%= pluralize(@counter, 'visit') %> to this page
+  </h2>
+
   <ul>
     <% cache @products do %>
       <% @products.each do |product| %>
