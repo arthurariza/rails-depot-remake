@@ -23,12 +23,15 @@ class LineItemsController < ApplicationController
   def edit; end
 
   # POST /line_items or /line_items.json
+  # rubocop:disable Metrics/AbcSize
+  # rubocop:disable Metrics/MethodLength
   def create
     product = Product.find(params[:product_id])
     @line_item = @cart.add_product(product)
 
     respond_to do |format|
       if @line_item.save
+        format.turbo_stream
         format.html { redirect_to store_index_url }
         format.json { render :show, status: :created, location: @line_item }
       else
