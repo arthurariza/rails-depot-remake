@@ -7,4 +7,15 @@ class LineItem < ApplicationRecord
   def total_price
     product.price * quantity
   end
+
+  def decrement_quantity
+    quantity = self.quantity
+
+    if quantity == 1
+      destroy
+    else
+      quantity -= 1
+      update(quantity:)
+    end
+  end
 end
