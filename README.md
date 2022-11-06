@@ -21,3 +21,5 @@
 `bin/rails generate migration add_quantity_to_line_items quantity:integer`
 
 `bin/rails generate migration combine_items_in_cart`
+
+`bin/rails generate channel products`
