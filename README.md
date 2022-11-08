@@ -23,3 +23,7 @@
 `bin/rails generate migration combine_items_in_cart`
 
 `bin/rails generate channel products`
+
+`bin/rails generate scaffold Order name address:text email pay_type:integer`
+
+`bin/rails generate migration add_order_to_line_item order:references`
