@@ -7,12 +7,20 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
     @order = orders(:one)
   end
 
+  test 'requires item in cart' do
+    get new_order_url
+    assert_redirected_to store_index_path
+    assert_equal 'Your cart is empty', flash[:notice]
+  end
+
   test 'should get index' do
     get orders_url
     assert_response :success
   end
 
   test 'should get new' do
+    post line_items_url, params: { product_id: products(:ruby).id }
+
     get new_order_url
     assert_response :success
   end
@@ -24,7 +32,7 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
                               pay_type: @order.pay_type } }
     end
 
-    assert_redirected_to order_url(Order.last)
+    assert_redirected_to store_index_url
   end
 
   test 'should show order' do
