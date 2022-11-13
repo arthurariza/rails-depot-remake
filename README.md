@@ -29,3 +29,5 @@
 `bin/rails generate migration add_order_to_line_item order:references`
 
 `bin/rails generate stimulus payment`
+
+`bin/rails generate mailer Order received shipped`
