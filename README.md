@@ -31,3 +31,5 @@
 `bin/rails generate stimulus payment`
 
 `bin/rails generate mailer Order received shipped`
+
+`bin/rails generate scaffold User name:string password:digest`
