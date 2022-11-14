@@ -33,3 +33,7 @@
 `bin/rails generate mailer Order received shipped`
 
 `bin/rails generate scaffold User name:string password:digest`
+
+`bin/rails generate controller Sessions new create destroy`
+
+`bin/rails generate controller Admin index`
